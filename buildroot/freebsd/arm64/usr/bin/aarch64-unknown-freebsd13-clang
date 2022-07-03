@@ -1,0 +1,32 @@
+#!/bin/bash
+
+# Golang forces "-fuse-ld=ld.bfd" while compiling to freebsd/arm64 (issue #35197)
+# We want to bypass this behavior since ld.lld actually working in our cases
+
+# This Clang wrapper bypasses the detections defined here
+# https://go-review.googlesource.com/c/go/+/203519/2/src/cmd/link/internal/ld/lib.go#1297
+
+if [ ! ${ALT_CLANG} ]; then
+  ALT_CLANG="clang"
+fi
+ORIG_ARG="$@"
+POSITIONAL_ARGS=()
+while [[ $# -gt 0 ]]; do
+  case $1 in
+    -Wl,--version)
+      echo "GNU ld"
+      POSITIONAL_ARGS+=("$1")
+      shift
+      ;;
+    -fuse-ld=*bfd*)
+      shift
+      ;;
+    *)
+      POSITIONAL_ARGS+=("$1")
+      shift
+      ;;
+  esac
+done
+
+set -- "${POSITIONAL_ARGS[@]}"
+"exec" "$ALT_CLANG" "${POSITIONAL_ARGS[@]}"
