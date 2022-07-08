@@ -1,0 +1,30 @@
+#!/bin/bash
+
+# As of go1.18.3, it uses "-Wl,--compress-debug-sections=zlib-gnu" somehow while compiling on linux
+# which appears unsupported by LLVM LLD
+# We want to bypass this behavior since "-Wl,--compress-debug-sections=zlib" actually working in our cases
+
+# This Clang wrapper bypasses the behavior defined here
+# https://github.com/golang/go/blob/4068be56ce7721a3d75606ea986d11e9ca27077a/src/cmd/link/internal/ld/lib.go#L1480
+# Fixed in go1.19
+
+if [ ! ${ALT_CLANG} ]; then
+  ALT_CLANG="clang"
+fi
+ORIG_ARG="$@"
+POSITIONAL_ARGS=()
+while [[ $# -gt 0 ]]; do
+  case $1 in
+    -Wl,--compress-debug-sections=zlib-gnu)
+      POSITIONAL_ARGS+=("-Wl,--compress-debug-sections=zlib")
+      shift
+      ;;
+    *)
+      POSITIONAL_ARGS+=("$1")
+      shift
+      ;;
+  esac
+done
+
+set -- "${POSITIONAL_ARGS[@]}"
+"exec" "$ALT_CLANG" "${POSITIONAL_ARGS[@]}"
