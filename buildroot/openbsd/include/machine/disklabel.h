@@ -8,7 +8,7 @@
 #elif defined (__arm__)
 #include "arm/disklabel.h"
 #elif defined (__arm64__) || defined (__aarch64__)
-#include "aarch64/disklabel.h"
+#include "arm64/disklabel.h"
 #else
 #error architecture not supported
 #endif

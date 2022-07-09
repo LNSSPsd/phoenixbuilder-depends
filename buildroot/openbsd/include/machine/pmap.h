@@ -8,7 +8,7 @@
 #elif defined (__arm__)
 #include "arm/pmap.h"
 #elif defined (__arm64__) || defined (__aarch64__)
-#include "aarch64/pmap.h"
+#include "arm64/pmap.h"
 #else
 #error architecture not supported
 #endif

@@ -8,7 +8,7 @@
 #elif defined (__arm__)
 #include "arm/kcore.h"
 #elif defined (__arm64__) || defined (__aarch64__)
-#include "aarch64/kcore.h"
+#include "arm64/kcore.h"
 #else
 #error architecture not supported
 #endif

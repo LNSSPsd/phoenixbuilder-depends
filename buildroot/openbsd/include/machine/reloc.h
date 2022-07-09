@@ -8,7 +8,7 @@
 #elif defined (__arm__)
 #include "arm/reloc.h"
 #elif defined (__arm64__) || defined (__aarch64__)
-#include "aarch64/reloc.h"
+#include "arm64/reloc.h"
 #else
 #error architecture not supported
 #endif

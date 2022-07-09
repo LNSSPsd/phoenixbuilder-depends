@@ -8,7 +8,7 @@
 #elif defined (__arm__)
 #include "arm/trap.h"
 #elif defined (__arm64__) || defined (__aarch64__)
-#include "aarch64/trap.h"
+#include "arm64/trap.h"
 #else
 #error architecture not supported
 #endif

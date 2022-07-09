@@ -8,7 +8,7 @@
 #elif defined (__arm__)
 #include "arm/gdt.h"
 #elif defined (__arm64__) || defined (__aarch64__)
-#include "aarch64/gdt.h"
+#include "arm64/gdt.h"
 #else
 #error architecture not supported
 #endif

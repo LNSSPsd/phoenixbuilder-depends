@@ -8,7 +8,7 @@
 #elif defined (__arm__)
 #include "arm/spinlock.h"
 #elif defined (__arm64__) || defined (__aarch64__)
-#include "aarch64/spinlock.h"
+#include "arm64/spinlock.h"
 #else
 #error architecture not supported
 #endif

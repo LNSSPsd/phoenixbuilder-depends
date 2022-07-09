@@ -8,7 +8,7 @@
 #elif defined (__arm__)
 #include "arm/exec.h"
 #elif defined (__arm64__) || defined (__aarch64__)
-#include "aarch64/exec.h"
+#include "arm64/exec.h"
 #else
 #error architecture not supported
 #endif

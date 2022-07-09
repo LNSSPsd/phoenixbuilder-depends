@@ -8,7 +8,7 @@
 #elif defined (__arm__)
 #include "arm/mpbiosreg.h"
 #elif defined (__arm64__) || defined (__aarch64__)
-#include "aarch64/mpbiosreg.h"
+#include "arm64/mpbiosreg.h"
 #else
 #error architecture not supported
 #endif

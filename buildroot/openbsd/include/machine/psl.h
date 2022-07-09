@@ -8,7 +8,7 @@
 #elif defined (__arm__)
 #include "arm/psl.h"
 #elif defined (__arm64__) || defined (__aarch64__)
-#include "aarch64/psl.h"
+#include "arm64/psl.h"
 #else
 #error architecture not supported
 #endif

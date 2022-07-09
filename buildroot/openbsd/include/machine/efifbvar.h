@@ -8,7 +8,7 @@
 #elif defined (__arm__)
 #include "arm/efifbvar.h"
 #elif defined (__arm64__) || defined (__aarch64__)
-#include "aarch64/efifbvar.h"
+#include "arm64/efifbvar.h"
 #else
 #error architecture not supported
 #endif

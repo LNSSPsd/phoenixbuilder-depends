@@ -8,7 +8,7 @@
 #elif defined (__arm__)
 #include "arm/tss.h"
 #elif defined (__arm64__) || defined (__aarch64__)
-#include "aarch64/tss.h"
+#include "arm64/tss.h"
 #else
 #error architecture not supported
 #endif

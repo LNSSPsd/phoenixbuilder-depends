@@ -8,7 +8,7 @@
 #elif defined (__arm__)
 #include "arm/pctr.h"
 #elif defined (__arm64__) || defined (__aarch64__)
-#include "aarch64/pctr.h"
+#include "arm64/pctr.h"
 #else
 #error architecture not supported
 #endif

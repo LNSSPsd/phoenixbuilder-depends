@@ -8,7 +8,7 @@
 #elif defined (__arm__)
 #include "arm/fenv.h"
 #elif defined (__arm64__) || defined (__aarch64__)
-#include "aarch64/fenv.h"
+#include "arm64/fenv.h"
 #else
 #error architecture not supported
 #endif

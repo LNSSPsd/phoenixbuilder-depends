@@ -8,7 +8,7 @@
 #elif defined (__arm__)
 #include "arm/pte.h"
 #elif defined (__arm64__) || defined (__aarch64__)
-#include "aarch64/pte.h"
+#include "arm64/pte.h"
 #else
 #error architecture not supported
 #endif

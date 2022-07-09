@@ -8,7 +8,7 @@
 #elif defined (__arm__)
 #include "arm/biosvar.h"
 #elif defined (__arm64__) || defined (__aarch64__)
-#include "aarch64/biosvar.h"
+#include "arm64/biosvar.h"
 #else
 #error architecture not supported
 #endif

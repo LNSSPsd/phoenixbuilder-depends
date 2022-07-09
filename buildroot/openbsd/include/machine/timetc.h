@@ -8,7 +8,7 @@
 #elif defined (__arm__)
 #include "arm/timetc.h"
 #elif defined (__arm64__) || defined (__aarch64__)
-#include "aarch64/timetc.h"
+#include "arm64/timetc.h"
 #else
 #error architecture not supported
 #endif

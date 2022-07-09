@@ -8,7 +8,7 @@
 #elif defined (__arm__)
 #include "arm/_float.h"
 #elif defined (__arm64__) || defined (__aarch64__)
-#include "aarch64/_float.h"
+#include "arm64/_float.h"
 #else
 #error architecture not supported
 #endif

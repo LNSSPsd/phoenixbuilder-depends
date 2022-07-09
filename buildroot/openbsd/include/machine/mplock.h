@@ -8,7 +8,7 @@
 #elif defined (__arm__)
 #include "arm/mplock.h"
 #elif defined (__arm64__) || defined (__aarch64__)
-#include "aarch64/mplock.h"
+#include "arm64/mplock.h"
 #else
 #error architecture not supported
 #endif

@@ -8,7 +8,7 @@
 #elif defined (__arm__)
 #include "arm/setjmp.h"
 #elif defined (__arm64__) || defined (__aarch64__)
-#include "aarch64/setjmp.h"
+#include "arm64/setjmp.h"
 #else
 #error architecture not supported
 #endif

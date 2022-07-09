@@ -8,7 +8,7 @@
 #elif defined (__arm__)
 #include "arm/signal.h"
 #elif defined (__arm64__) || defined (__aarch64__)
-#include "aarch64/signal.h"
+#include "arm64/signal.h"
 #else
 #error architecture not supported
 #endif

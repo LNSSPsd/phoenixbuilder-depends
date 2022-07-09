@@ -8,7 +8,7 @@
 #elif defined (__arm__)
 #include "arm/rbus_machdep.h"
 #elif defined (__arm64__) || defined (__aarch64__)
-#include "aarch64/rbus_machdep.h"
+#include "arm64/rbus_machdep.h"
 #else
 #error architecture not supported
 #endif

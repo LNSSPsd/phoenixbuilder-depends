@@ -8,7 +8,7 @@
 #elif defined (__arm__)
 #include "arm/ioctl_fd.h"
 #elif defined (__arm64__) || defined (__aarch64__)
-#include "aarch64/ioctl_fd.h"
+#include "arm64/ioctl_fd.h"
 #else
 #error architecture not supported
 #endif

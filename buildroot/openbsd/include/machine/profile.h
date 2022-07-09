@@ -8,7 +8,7 @@
 #elif defined (__arm__)
 #include "arm/profile.h"
 #elif defined (__arm64__) || defined (__aarch64__)
-#include "aarch64/profile.h"
+#include "arm64/profile.h"
 #else
 #error architecture not supported
 #endif

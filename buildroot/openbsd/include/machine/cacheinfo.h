@@ -8,7 +8,7 @@
 #elif defined (__arm__)
 #include "arm/cacheinfo.h"
 #elif defined (__arm64__) || defined (__aarch64__)
-#include "aarch64/cacheinfo.h"
+#include "arm64/cacheinfo.h"
 #else
 #error architecture not supported
 #endif

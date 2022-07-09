@@ -8,7 +8,7 @@
 #elif defined (__arm__)
 #include "arm/endian.h"
 #elif defined (__arm64__) || defined (__aarch64__)
-#include "aarch64/endian.h"
+#include "arm64/endian.h"
 #else
 #error architecture not supported
 #endif

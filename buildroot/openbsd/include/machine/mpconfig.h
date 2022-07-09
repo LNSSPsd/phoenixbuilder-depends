@@ -8,7 +8,7 @@
 #elif defined (__arm__)
 #include "arm/mpconfig.h"
 #elif defined (__arm64__) || defined (__aarch64__)
-#include "aarch64/mpconfig.h"
+#include "arm64/mpconfig.h"
 #else
 #error architecture not supported
 #endif

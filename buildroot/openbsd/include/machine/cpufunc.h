@@ -8,7 +8,7 @@
 #elif defined (__arm__)
 #include "arm/cpufunc.h"
 #elif defined (__arm64__) || defined (__aarch64__)
-#include "aarch64/cpufunc.h"
+#include "arm64/cpufunc.h"
 #else
 #error architecture not supported
 #endif

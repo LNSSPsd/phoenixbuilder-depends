@@ -8,7 +8,7 @@
 #elif defined (__arm__)
 #include "arm/proc.h"
 #elif defined (__arm64__) || defined (__aarch64__)
-#include "aarch64/proc.h"
+#include "arm64/proc.h"
 #else
 #error architecture not supported
 #endif

@@ -8,7 +8,7 @@
 #elif defined (__arm__)
 #include "arm/hibernate.h"
 #elif defined (__arm64__) || defined (__aarch64__)
-#include "aarch64/hibernate.h"
+#include "arm64/hibernate.h"
 #else
 #error architecture not supported
 #endif

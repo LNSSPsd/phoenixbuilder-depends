@@ -8,7 +8,7 @@
 #elif defined (__arm__)
 #include "arm/smbiosvar.h"
 #elif defined (__arm64__) || defined (__aarch64__)
-#include "aarch64/smbiosvar.h"
+#include "arm64/smbiosvar.h"
 #else
 #error architecture not supported
 #endif

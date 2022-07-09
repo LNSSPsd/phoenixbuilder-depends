@@ -8,7 +8,7 @@
 #elif defined (__arm__)
 #include "arm/pio.h"
 #elif defined (__arm64__) || defined (__aarch64__)
-#include "aarch64/pio.h"
+#include "arm64/pio.h"
 #else
 #error architecture not supported
 #endif

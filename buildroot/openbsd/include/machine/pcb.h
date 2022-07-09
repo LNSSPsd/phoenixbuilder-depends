@@ -8,7 +8,7 @@
 #elif defined (__arm__)
 #include "arm/pcb.h"
 #elif defined (__arm64__) || defined (__aarch64__)
-#include "aarch64/pcb.h"
+#include "arm64/pcb.h"
 #else
 #error architecture not supported
 #endif

@@ -8,7 +8,7 @@
 #elif defined (__arm__)
 #include "arm/isa_machdep.h"
 #elif defined (__arm64__) || defined (__aarch64__)
-#include "aarch64/isa_machdep.h"
+#include "arm64/isa_machdep.h"
 #else
 #error architecture not supported
 #endif
