@@ -22,6 +22,14 @@ while [[ $# -gt 0 ]]; do
       POSITIONAL_ARGS+=("-no-pie")
       shift
       ;;
+    -Wl,--compress-debug-sections=zlib-gnu)
+      POSITIONAL_ARGS+=("-Wl,--compress-debug-sections=zlib")
+      shift
+      ;;
+    --compress-debug-sections=zlib-gnu)
+      POSITIONAL_ARGS+=("--compress-debug-sections=zlib")
+      shift
+      ;;
     *)
       POSITIONAL_ARGS+=("$1")
       shift
