@@ -1,0 +1,33 @@
+#!/bin/bash
+
+# Golang forces "-Wl,-nopie" while compiling to OpenBSD targets
+# We want to bypass this behavior since ld.lld does not actually supporting this flag which
+# causing errors without patches from openbsd/ports
+
+# This Clang wrapper bypasses this behavior which defined here
+# https://github.com/golang/go/blob/master/src/cmd/link/internal/ld/lib.go
+
+if [ ! ${ALT_LD} ]; then
+  ALT_LD="ld"
+fi
+ORIG_ARG="$@"
+POSITIONAL_ARGS=()
+while [[ $# -gt 0 ]]; do
+  case $1 in
+    -Wl,-nopie)
+      POSITIONAL_ARGS+=("-Wl,-no-pie")
+      shift
+      ;;
+    -nopie)
+      POSITIONAL_ARGS+=("-no-pie")
+      shift
+      ;;
+    *)
+      POSITIONAL_ARGS+=("$1")
+      shift
+      ;;
+  esac
+done
+
+set -- "${POSITIONAL_ARGS[@]}"
+"exec" "$ALT_LD" "${POSITIONAL_ARGS[@]}"
