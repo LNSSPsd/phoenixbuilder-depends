@@ -49,7 +49,6 @@
 /* *INDENT-OFF* */
 
 #include <ncurses_dll.h>
-#include <windows.h>
 #ifdef __cplusplus
 extern "C" {
 #endif
