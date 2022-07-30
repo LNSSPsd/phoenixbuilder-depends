@@ -10,10 +10,10 @@ ZIP_OBJS = minizip.o zip.o   ioapi.o ../../libz.a
 all: miniunz minizip
 
 miniunz:  $(UNZ_OBJS)
-	$(CC) $(CFLAGS) -o $@ $(UNZ_OBJS)
+	$(CC) $(CFLAGS) -o $@ $(UNZ_OBJS) $(LDFLAGS)
 
 minizip:  $(ZIP_OBJS)
-	$(CC) $(CFLAGS) -o $@ $(ZIP_OBJS)
+	$(CC) $(CFLAGS) -o $@ $(ZIP_OBJS) $(LDFLAGS)
 
 test:	miniunz minizip
 	@rm -f test.*
