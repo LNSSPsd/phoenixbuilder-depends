@@ -27,3 +27,15 @@ AR="$TARGET_AR" CC="$TARGET_CC" CFLAGS LDFLAGS &&
    CC="cc -target arm64-apple-macos11 -arch arm64 -mmacosx-version-min=11.0"
    CC="cc -target x86_64-apple-macos10.12 -arch x86_64 -mmacosx-version-min=10.12"
    CC="cc -target arm64-apple-ios12 -arch arm64 -mios-version-min=12.0" CFLAGS+="-isysroot $IOS_SYSROOT"
+
+ - BSD
+   uname=BSD
+   CFLAGS+="--sysroot=$TARGET_SYSROOT -fuse-ld=ld.lld"
+   CC="cc -target i686-unknown-freebsd"
+   CC="cc -target amd64-unknown-freebsd"
+   CC="cc -target aarch64-unknown-freebsd" 
+   CC="cc -target i386--netbsd"
+   CC="cc -target amd64--netbsd"
+   CC="cc -target aarch64--netbsd"
+   CC="cc -target i386-unknown-openbsd"
+   CC="cc -target amd64-unknown-openbsd"
