@@ -187,13 +187,18 @@ func (d *Decoder) unmarshal(val reflect.Value, tagType byte) error {
 		}
 
 	case TagByteArray:
-		aryLen, err := d.readInt32()
+		aryLenInt32, err := d.readInt32()
 		if err != nil {
 			return err
 		}
-		if aryLen < 0 {
-			return errors.New("byte array len less than 0")
-		}
+		aryLen := uint32(aryLenInt32)
+		// aryLen, err := d.readInt32()
+		// if err != nil {
+		// 	return err
+		// }
+		// if aryLen < 0 {
+		// 	return errors.New("byte array len less than 0")
+		// }
 		ba := make([]byte, aryLen)
 		if _, err = io.ReadFull(d.r, ba); err != nil {
 			return err
